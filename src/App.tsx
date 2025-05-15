@@ -3,7 +3,6 @@ import Header from "./components/Header";
 import Footer from "./components/Footer";
 import DataDisplay from "./components/DataDisplay";
 import MetaData from "./components/MetaDataForm";
-import { FaLocationDot } from "react-icons/fa6";
 
 export default function App() {
 	const [data, setData] = useState<object | ReactNode>({
