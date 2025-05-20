@@ -1,9 +1,8 @@
-import { ReactNode } from "react";
+// import { ReactNode } from "react";
 import { FaMobile, FaLocationDot, FaEnvelope, FaGlobe } from "react-icons/fa6";
-interface Props {
-	data?: ReactNode;
-}
-export default function DataDisplay({ data }: Props) {
+// @ts-ignore
+export default function DataDisplay({ data }) {
+	if(!data) return null;
 	if (data) {
 		return (
 			<>
@@ -13,11 +12,10 @@ export default function DataDisplay({ data }: Props) {
 					{new Date().toLocaleString("default", { year: "numeric" })}
 				</p>
 				<main className="pt-10 ">
-					<h1 className="bg-slate-300 text-4xl font-bold w-[80%] text-center h-auto mx-auto">
-						{data.name}
+					<h1 className="bg-slate-300 text-4xl w-[80%] text-center h-auto mx-auto">
+						{data.name} | <span className="font-script">{data.role}</span>
 					</h1>
-					<p className="">{data.role}</p>
-					<section className=" flex flex-row gap-5 ">
+					<section className="pt-10 flex gap-10 mx-[20%]">
 						<p className="flex items-center gap-1">
 							<FaLocationDot />
 							{data.location}

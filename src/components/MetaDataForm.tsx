@@ -1,3 +1,4 @@
+// @ts-ignore
 export default function MetaData({ data, setData, sectionTitle }) {
 	return (
 		<>
@@ -38,7 +39,7 @@ export default function MetaData({ data, setData, sectionTitle }) {
 				<input
 					type="text"
 					className="input"
-					placeholder="Tashkent"
+					placeholder="john@gmail.com"
 					onChange={(e) => {
 						setData({ ...data, email: e.target.value });
 					}}
@@ -48,7 +49,7 @@ export default function MetaData({ data, setData, sectionTitle }) {
 				<input
 					type="text"
 					className="input"
-					placeholder="Tashkent"
+					placeholder="+1 123 456 1234"
 					onChange={(e) => {
 						setData({ ...data, phone: e.target.value });
 					}}
@@ -58,7 +59,7 @@ export default function MetaData({ data, setData, sectionTitle }) {
 				<input
 					type="text"
 					className="input"
-					placeholder="Tashkent"
+					placeholder="linkedin.com/john-doe"
 					onChange={(e) => {
 						setData({ ...data, website: e.target.value });
 					}}
